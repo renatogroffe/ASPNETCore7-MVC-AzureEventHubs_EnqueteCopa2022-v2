@@ -15,11 +15,6 @@ public class VotacaoController : Controller
         _producer = producer;
     }
 
-    public async Task<IActionResult> VotoBrasil()
-    {
-        return await ProcessarVoto("Brasil");
-    }
-
     public async Task<IActionResult> VotoArgentina()
     {
         return await ProcessarVoto("Argentina");
@@ -28,11 +23,6 @@ public class VotacaoController : Controller
     public async Task<IActionResult> VotoFranca()
     {
         return await ProcessarVoto("Franca");
-    }
-
-    public async Task<IActionResult> VotoOutro()
-    {
-        return await ProcessarVoto("Outro");
     }
 
     private async Task<IActionResult> ProcessarVoto(string pais)
